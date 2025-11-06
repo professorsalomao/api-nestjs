@@ -90,11 +90,3 @@ jobs:
           --force-new-deployment \
           --region ${{ env.AWS_REGION }}
 
-      - name: Wait for service stability
-        run: |
-          echo "Waiting for ECS service stability..."
-          aws ecs wait services-stable \
-          --cluster ${{ env.ECS_CLUSTER }} \
-          --services ${{ env.ECS_SERVICE }} \
-          --region ${{ env.AWS_REGION }}
-          echo " Deployment successful!"
