@@ -65,7 +65,7 @@ jobs:
               \"image\": \"${{ steps.build-image.outputs.image }}\",
               \"essential\": true,
               \"portMappings\": [
-                { \"containerPort\": 3005, \"hostPort\": 3005, \"protocol\": \"tcp\" }
+                { \"containerPort\": 3005, \"hostPort\": 80, \"protocol\": \"tcp\" }
               ],
               \"logConfiguration\": {
                 \"logDriver\": \"awslogs\",
