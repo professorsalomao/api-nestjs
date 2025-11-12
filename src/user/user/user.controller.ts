@@ -25,10 +25,10 @@ export class UserController {
     return this.userService.findAll();
   }
 
-  // @Get('list/admin')
-  // findAdmin() {
-  //   return this.userService.findOne(1);
-  // }
+  @Get('list/admin')
+  findAdmin() {
+    return this.userService.findOne(1);
+  }
 
   @Get(':id')
   findOne(@Param('id') id: string) {
